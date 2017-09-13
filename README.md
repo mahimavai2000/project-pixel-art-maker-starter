@@ -3,14 +3,10 @@
 ## Table of Contents
 
 * [Instructions](#instructions)
-* [Contributing](#contributing)
 
 ## Instructions
-
-To get started, open `designs.js` and start building out the app's functionality.
-
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+- Select the Grid Height,Grid Width and Pick a color and Submit it.
+- Based on the input values grid will get display.
+- Click the pixel within the grid to create the art.
+- The pixel art color will be in the Picked color which has selected before Submit.
+- Change the desired Grid Height, Grid Width or Color and Submit it again to get the desired grid size and Pixel color. 

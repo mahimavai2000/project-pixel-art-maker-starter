@@ -2,17 +2,21 @@
 // When size is submitted by the user, call makeGrid()
 const table = document.getElementById("pixel_canvas");
 document.getElementById('sizePicker').addEventListener('submit', function makeGrid(e) {
-    e.preventDefault();
-    clearGrid();
+    e.preventDefault();    
+    table.innerHTML = '';  //Clear the grid
+    //clearGrid();
     const input_heightValue = document.getElementById("input_height").value;
     const input_widthValue = document.getElementById("input_width").value;
-    console.log("Test");
-    console.log(input_heightValue, input_widthValue);
     for (let i = 0; i < input_heightValue; i++) {
-        let rows = document.createElement("tr");
+        //let rows = document.createElement("tr");
+        const rows = table.insertRow(i);
         let j = 0;
         while (j < input_widthValue) {
-            let cells = document.createElement("td");
+            const cells = rows.insertCell(j);
+            /*cells.onclick = () => {
+            cells.style.backgroundColor = colorPickerValue;
+            };*/
+            //let cells = document.createElement("td");
             j++;
             rows.appendChild(cells);
         }
@@ -22,12 +26,12 @@ document.getElementById('sizePicker').addEventListener('submit', function makeGr
 });
 
 //Clear the grid
-function clearGrid() {
+/*function clearGrid() {
     console.log(table.rows.length);
     while (table.rows.length > 0) {
         table.deleteRow(0);
     }
-}
+}*/
 
 //Traverse the table and call the changeColour function on the selected table cell
 function Cellcolor() {
